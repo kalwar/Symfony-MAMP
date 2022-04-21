@@ -32,16 +32,6 @@ RUN docker-php-ext-configure intl && \
     docker-php-ext-install exif && \
     docker-php-ext-enable exif
 
-# Install ldap.
-RUN rm -rf /var/lib/apt/lists/* && \
-    docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-install ldap
-
-# Install wkhtmlopdf.
-RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb && \
-    dpkg -i wkhtmltox_0.12.5-1.stretch_amd64.deb && \
-    apt-get -f install
-
 # Enable Apache mod_rewrite.
 RUN a2enmod rewrite
 
