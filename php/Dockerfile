@@ -1,4 +1,4 @@
-FROM php:8.0.14-apache
+FROM php:8.1-apache
 
 # Set server name for Apache.
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
@@ -20,7 +20,7 @@ COPY php.ini /usr/local/etc/php/php.ini
 
 # Download and move composer.
 RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
-   mv composer.phar /usr/local/bin/composer
+    mv composer.phar /usr/local/bin/composer
 
 # PHP utiles.
 RUN docker-php-ext-configure intl && \
