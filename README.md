@@ -18,8 +18,8 @@ docker-compose up --build
 - Symfony 6 will run on [http://localhost:8007](http://localhost:8007)
 - phpMyAdmin will run on [http://localhost:9082](http://localhost:9082)
 
-### Apple M1 Chip
-Uncomment line 4, remove # from [docker-compose.yml](https://github.com/kalwar/Symfony-MAMP/blob/main/docker-compose.yml#L4)  file
+### Optional: Apple M1 Chip
+You may have to Uncomment line 4, remove # from [docker-compose.yml](https://github.com/kalwar/Symfony-MAMP/blob/main/docker-compose.yml#L4)  file
 
 # Use for reference
 
